@@ -8,7 +8,7 @@ const config = require('config');
 const path = require('path');
 
 if (!config.get('jwtSecret')) throw new Error('Set env variable');
-const url = config.get('MongoURI');
+const url = config.get('mongoURI');
 db.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(console.log('Connected to Database'))
     .catch(err => {
