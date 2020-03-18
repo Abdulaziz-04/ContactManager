@@ -1,0 +1,26 @@
+{
+    "name": "contactmanager",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node index.js",
+        "server": "nodemon index.js",
+        "client": "npm start --prefix frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\" ",
+        "heroku-pb": " NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "concurrently": "^5.1.0",
+        "config": "^3.3.0",
+        "express": "^4.17.1",
+        "joi": "^14.3.1",
+        "joi-objectid": "^3.0.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.9.5",
+        "nodemon": "^2.0.2"
+    }
+}
