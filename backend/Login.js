@@ -29,7 +29,8 @@ router.post('/', async (req, res) => {
     if (!find)
         return res.status(400).json({ msg: 'Invalid Email or Password' });
     const verify = bcrypt.compare(req.body.password, find.password);
-    if (!verify) return res.status(400).json({ msg: 'Incorrect password' });
+    if (!verify)
+        return res.status(400).json({ msg: 'Invalid Email or Password' });
     const token = jwt.sign({ id: find._id }, config.get('jwtSecret'), {
         expiresIn: 360000
     });

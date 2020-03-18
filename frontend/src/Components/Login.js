@@ -10,7 +10,7 @@ export const Login = props => {
         if (isAuth) {
             props.history.push('/');
         }
-        if (error != null) {
+        if (error === 'Invalid Email or Password') {
             setAlert('Inavlid Credentials', 'danger');
             clearError();
         }
