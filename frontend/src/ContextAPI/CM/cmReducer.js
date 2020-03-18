@@ -24,16 +24,14 @@ const cmReducer = (state, action) => {
         case CREATE_CONTACT:
             return {
                 ...state,
-                contacts: [...state.contacts, action.payload],
-                loading: false
+                contacts: [...state.contacts, action.payload]
             };
         case DELETE_CONTACT:
             return {
                 ...state,
                 contacts: state.contacts.filter(
                     contact => contact._id !== action.payload
-                ),
-                loading: false
+                )
             };
         case UPDATE_CONTACT:
             return {
@@ -42,8 +40,7 @@ const cmReducer = (state, action) => {
                     contact._id === action.payload._id
                         ? action.payload
                         : contact
-                ),
-                loading: false
+                )
             };
         case CONTACT_ERROR:
             return {

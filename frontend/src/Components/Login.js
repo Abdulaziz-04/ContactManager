@@ -10,7 +10,7 @@ export const Login = props => {
         if (isAuth) {
             props.history.push('/');
         }
-        if (error !== null) {
+        if (error != null) {
             setAlert('Inavlid Credentials', 'danger');
             clearError();
         }
