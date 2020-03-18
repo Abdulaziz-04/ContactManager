@@ -22,6 +22,7 @@ const AuthState = props => {
         error: null,
         loading: true
     };
+    const [state, dispatch] = useReducer(authReducer, initialState);
     const register = async formData => {
         const config = {
             header: {
@@ -68,7 +69,6 @@ const AuthState = props => {
         dispatch({ type: CLEAR_ERRORS });
     };
 
-    const [state, dispatch] = useReducer(authReducer, initialState);
     return (
         <authContext.Provider
             value={{
