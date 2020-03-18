@@ -1,4 +1,4 @@
 {
     "jwtSecret": "secret",
-    "Mongourl": "mongodb+srv://abdul:WELCOME04@contactsdb-wxjss.mongodb.net/CMDB"
+    "MongoURI": "mongodb+srv://abdul:WELCOME04@contactsdb-wxjss.mongodb.net/CMDB"
 }
