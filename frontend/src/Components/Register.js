@@ -18,7 +18,7 @@ export const Register = props => {
             props.history.push('/'); //redirects to the home page
             setAlert('Registered Successfully', 'special');
         }
-        if (error !== null) {
+        if (error === 'Email is already registered with another account!') {
             setAlert('Email already exists', 'danger');
             clearError();
         }
